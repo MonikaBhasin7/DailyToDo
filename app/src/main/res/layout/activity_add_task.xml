@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    tools:context=".AddTask">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddTask">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the task"
+        android:textSize="19dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <EditText
+        android:id="@+id/task"
+        android:inputType="textMultiLine"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent" /> <!-- Multiline input -->
+        android:lines="8" <!-- Total Lines prior display -->
+        android:minLines="6" <!-- Minimum lines -->
+        android:gravity="top|left" <!-- Cursor Position -->
+        android:maxLines="10" <!-- Maximum Lines -->
+        android:scrollbars="vertical" <!-- Vertical Scroll Bar -->
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Select Category"
+        android:layout_marginTop="70dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_playlist_add_black_24dp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Priority"
+        android:layout_marginTop="70dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <Spinner
+        android:id="@+id/spinner_priority"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="25dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Add"
+        android:textSize="15dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:onClick="add_click"/>
+
+
+</LinearLayout>
+</ScrollView>
